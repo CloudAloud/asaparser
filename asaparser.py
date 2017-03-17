@@ -4,6 +4,8 @@ from ciscoconfparse import CiscoConfParse
 from classes import *
 from functions import *
 
+# Usage: asaparser.py <config filename>
+
 filename = sys.argv[1]
 parse = CiscoConfParse(filename)
 
