@@ -6,7 +6,12 @@ from functions import *
 
 # Usage: asaparser.py <config filename>
 
-filename = sys.argv[1]
+if (len(sys.argv) > 1):
+    filename = sys.argv[1]
+else:
+    print('Usage: asaparser.py <config filename>')
+    sys.exit()
+
 parse = CiscoConfParse(filename)
 
 acllist, result = [], []
